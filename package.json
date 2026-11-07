@@ -1,0 +1,36 @@
+{
+  "name": "serein-commerce",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "predev": "npm run db:generate --workspace @serein/server",
+    "dev": "concurrently -k -n api,web -c magenta,cyan \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm run dev --workspace @serein/server",
+    "dev:client": "npm run dev --workspace @serein/client",
+    "build": "npm run db:generate --workspace @serein/server && npm run build --workspace @serein/server && npm run build --workspace @serein/client",
+    "typecheck": "npm run db:generate --workspace @serein/server && npm run typecheck --workspace @serein/server && npm run typecheck --workspace @serein/client",
+    "test": "npm run test --workspace @serein/server",
+    "db:generate": "npm run db:generate --workspace @serein/server",
+    "db:migrate": "npm run db:migrate --workspace @serein/server",
+    "db:seed": "npm run db:seed --workspace @serein/server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prisma": "^8.0.0-rc.30"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "allowScripts": {
+    "@prisma/engines@7.10.1": true,
+    "esbuild@0.28.2": true,
+    "prisma@7.10.1": true
+  },
+  "dependencies": {
+    "@prisma/client": "^7.10.1"
+  }
+}
