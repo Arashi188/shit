@@ -2,28 +2,103 @@
 
 :root {
   color-scheme: light;
-  --color-primary: #302536;
-  --color-accent: #c98483;
-  --color-ivory: #f7f3ed;
-  --color-charcoal: #29272a;
-  --color-sage: #a7b3a0;
-  --color-paper: #fffdfb;
-  --color-muted: #80787c;
-  --color-line: #e7e0da;
-  --font-heading: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-body: "Aptos", "Segoe UI", Arial, sans-serif;
+  --pink: #e6007a;
+  --pink-dark: #b90060;
+  --pink-deep: #8f004a;
+  --pink-soft: #ffe2ef;
+  --pink-wash: #fff4f9;
+  --blush: #ffeef6;
+  --ink: #1b1018;
+  --plum: #2a1422;
+  --plum-deep: #1d0d18;
+  --muted: #74666f;
+  --muted-light: #776871;
+  --line: #f0e2e8;
+  --line-strong: #e3ced8;
+  --paper: #ffffff;
+  --cream: #fdf8f5;
+  --gold: #f4b400;
+  --green: #127a50;
+  --red: #c03a4b;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 10px rgba(42, 20, 34, 0.06);
+  --shadow: 0 18px 55px rgba(42, 20, 34, 0.11);
+  --shadow-pink: 0 16px 38px rgba(230, 0, 122, 0.22);
+  --font-body: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  --font-display: "Outfit", "Segoe UI", Arial, sans-serif;
+  --max-width: 1400px;
 }
 
 @theme {
-  --color-serein-primary: var(--color-primary);
-  --color-serein-accent: var(--color-accent);
-  --color-serein-ivory: var(--color-ivory);
-  --color-serein-charcoal: var(--color-charcoal);
+  --color-serein-pink: var(--pink);
+  --color-serein-ink: var(--ink);
+  --color-serein-plum: var(--plum);
+  --color-serein-blush: var(--blush);
+  --color-serein-line: var(--line);
   --font-sans: var(--font-body);
-  --font-serif: var(--font-heading);
+  --font-display: var(--font-display);
 }
 
-* { box-sizing: border-box; }
-html, body, #root { min-height: 100%; margin: 0; }
-body { background: var(--color-ivory); color: var(--color-charcoal); font-family: var(--font-body); }
-button, input { font: inherit; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--pink);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
+}

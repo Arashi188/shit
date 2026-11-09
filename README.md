@@ -4,11 +4,12 @@ Premium intimate wellness commerce platform. This is a staged build: Steps 1 and
 
 ## Brand direction
 
-- Mood: warm, calm, luxurious, discreet, inclusive.
-- Primary: deep aubergine `#302536`.
-- Accent: muted rose `#C98483`.
-- Neutrals: warm ivory `#F7F3ED`, charcoal `#29272A`, soft sage `#A7B3A0`.
-- Type: editorial Playfair Display headings with DM Sans interface/body text.
+- Mood: bold, playful, inclusive, discreet, body-positive.
+- Primary: vivid pink `#e6007a`.
+- Deep neutrals: plum `#2a1422` and near-black `#1d0d18`.
+- Soft neutrals: blush `#fff4f9`, cream `#fdf8f5`, warm line `#f0e2e8`.
+- Accent: gold `#f4b400` for ratings.
+- Type: geometric display headings in Outfit with Plus Jakarta Sans interface/body text.
 - Tokens live in `client/src/styles/tokens.css`.
 
 The brand name is a working name and has not been legally cleared.
